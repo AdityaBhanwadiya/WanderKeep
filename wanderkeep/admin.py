@@ -1,5 +1,5 @@
 from django.contrib import admin
-from myplaces.models import User, Place, Category
+from wanderkeep.models import User, Place, Category
 
 # Register your models here.
 admin.site.register(User)

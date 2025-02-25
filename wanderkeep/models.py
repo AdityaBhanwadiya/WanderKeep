@@ -17,7 +17,7 @@ class Place(models.Model):
     person = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name="user")
     title = models.CharField(max_length=400, blank=True, null=True)
     description = models.CharField(max_length=2000, blank=True, null=True)
-    image = models.ImageField(upload_to="myplaces/static/places_pictures", default="myplaces/static/places_pictures/default.png", blank=True)
+    image = models.ImageField(upload_to="wanderkeep/static/places_pictures", default="wanderkeep/static/places_pictures/default.png", blank=True)
     address = models.CharField(max_length=2000, blank=True, null=True)
     longitude = models.CharField(max_length=400, blank=True, null=True)
     latitude = models.CharField(max_length=400, blank=True, null=True)

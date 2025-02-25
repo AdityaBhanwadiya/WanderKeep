@@ -63,7 +63,7 @@ class Migration(migrations.Migration):
                 ('country', models.CharField(blank=True, max_length=400, null=True)),
                 ('city', models.CharField(blank=True, max_length=400, null=True)),
                 ('date', models.DateTimeField(auto_now_add=True)),
-                ('categories', models.ManyToManyField(blank=True, related_name='categories', to='myplaces.category')),
+                ('categories', models.ManyToManyField(blank=True, related_name='categories', to='wanderkeep.category')),
                 ('person', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='user', to=settings.AUTH_USER_MODEL)),
             ],
         ),

@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.urls import reverse
 from django.http import JsonResponse
-from myplaces.serializers import *
+from wanderkeep.serializers import *
 from rest_framework import status
 from .models import User, Category, Place
 
@@ -23,7 +23,7 @@ def index(request):
     """
     categories = Category.objects.all()
 
-    return render(request, "myplaces/index.html", { 
+    return render(request, "wanderkeep/index.html", { 
         'categories': categories,
     })
 
@@ -276,16 +276,16 @@ def getLocationsByCategory(request, category):
 
 
 @login_required(login_url='login')
-def myplaces(request):
+def wanderkeep(request):
     """
-    Simple function to direct us to the Myplaces page.
+    Simple function to direct us to the wanderkeep page.
     We will send all the categoies that exist in order 
     to iterate through them and display all of them.
     """
 
     categories = Category.objects.all()
 
-    return render(request, "myplaces/my_places.html", {
+    return render(request, "wanderkeep/my_places.html", {
         'categories': categories,
     })
 
@@ -306,11 +306,11 @@ def login_view(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "myplaces/login.html", {
+            return render(request, "wanderkeep/login.html", {
                 "message": "Invalid username and/or password."
             })
     else:
-        return render(request, "myplaces/login.html")
+        return render(request, "wanderkeep/login.html")
 
 
 def logout_view(request):
@@ -333,7 +333,7 @@ def register(request):
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
         if password != confirmation:
-            return render(request, "myplaces/register.html", {
+            return render(request, "wanderkeep/register.html", {
                 "message": "Passwords must match."
             })
 
@@ -342,10 +342,10 @@ def register(request):
             user = User.objects.create_user(username, email, password)
             user.save()
         except IntegrityError:
-            return render(request, "myplaces/register.html", {
+            return render(request, "wanderkeep/register.html", {
                 "message": "Username already taken."
             })
         login(request, user)
         return HttpResponseRedirect(reverse("index"))
     else:
-        return render(request, "myplaces/register.html")
+        return render(request, "wanderkeep/register.html")

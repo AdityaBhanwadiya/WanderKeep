@@ -101,8 +101,8 @@ function submitNewPlace(event){
                 <br>
                 <h6 style="margin-top:10px;">${place.title}</h6>
                 <p>${place.description}</p>
-                <button onclick="redirectToMyPlaces()" class="btn btn-primary btn-sm redirect-myplaces">See Details</button>
-                <button id="${place.id}" onclick="deletePath(event)" class="btn btn-danger btn-sm redirect-myplaces">Delete</button>
+                <button onclick="redirectTowanderkeep()" class="btn btn-primary btn-sm redirect-wanderkeep">See Details</button>
+                <button id="${place.id}" onclick="deletePath(event)" class="btn btn-danger btn-sm redirect-wanderkeep">Delete</button>
             </div>
             `)) // add popup
             .addTo(map);

@@ -1,4 +1,4 @@
-{% extends "myplaces/layout.html" %} {% load static %}
+{% extends "wanderkeep/layout.html" %} {% load static %}
 
 {% block body %}
 
@@ -47,11 +47,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="Address-name" class="col-form-label">Address: (Auto-filled - if found) <img data-toggle="tooltip" data-placement="top" class="question-mark-logo" title="If you click on the location button at the bottom right, this field should auto-fill. However, we might not be able to find an address even if we have the coordinates." src="{% static 'myplaces/logos/question.png'%}" alt=""></label>
+                                <label for="Address-name" class="col-form-label">Address: (Auto-filled - if found) <img data-toggle="tooltip" data-placement="top" class="question-mark-logo" title="If you click on the location button at the bottom right, this field should auto-fill. However, we might not be able to find an address even if we have the coordinates." src="{% static 'wanderkeep/logos/question.png'%}" alt=""></label>
                                 <input placeholder="Optional" type="text" class="form-control" id="Address-name">
                             </div>
 
-                            <label for="lat" class="col-form-label">Longitude & Latitude: (Auto-filled) <img data-toggle="tooltip" data-placement="top" class="question-mark-logo" title="If you click on the location button at the bottom right, these fields should auto-fill." src="{% static 'myplaces/logos/question.png'%}" alt=""></label>
+                            <label for="lat" class="col-form-label">Longitude & Latitude: (Auto-filled) <img data-toggle="tooltip" data-placement="top" class="question-mark-logo" title="If you click on the location button at the bottom right, these fields should auto-fill." src="{% static 'wanderkeep/logos/question.png'%}" alt=""></label>
                             <div class="input-group" id="lat">
                                 <span class="input-group-text">Lgn</span>
                                 <input type="text" class="form-control" placeholder="Longitude" id="Longitude-name">
@@ -62,7 +62,7 @@
 
                             <div class="form-group">
                                 <br>
-                                <label for="category-name" class="col-form-label">Category:  <img data-toggle="tooltip" data-placement="top" class="question-mark-logo" title="Please, select at least one category." src="{% static 'myplaces/logos/question.png'%}" alt=""></label>
+                                <label for="category-name" class="col-form-label">Category:  <img data-toggle="tooltip" data-placement="top" class="question-mark-logo" title="Please, select at least one category." src="{% static 'wanderkeep/logos/question.png'%}" alt=""></label>
                                 <br>
                                 {% for category in categories %}
                                     <div class="form-check form-check-inline">
@@ -98,7 +98,7 @@
 <div class="delete-modals">
 </div>
 
-<script  src="{% static 'myplaces/map.js' %}" defer></script>
-<script  src="{% static 'myplaces/index.js' %}"></script>
+<script  src="{% static 'wanderkeep/map.js' %}" defer></script>
+<script  src="{% static 'wanderkeep/index.js' %}"></script>
 
 {% endblock %}

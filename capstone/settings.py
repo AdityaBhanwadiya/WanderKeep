@@ -25,7 +25,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'myplaces',
+    'wanderkeep',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,7 +76,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'myplaces.User'
+AUTH_USER_MODEL = 'wanderkeep.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from myplaces.models import *
+from wanderkeep.models import *
 
 
 class UserSerializer(serializers.ModelSerializer):

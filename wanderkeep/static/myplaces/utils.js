@@ -40,8 +40,8 @@ function resetFile() {
     file.value = '';
 }
 
-function redirectToMyPlaces(){
-    window.location.replace("http://127.0.0.1:8000/myplaces");
+function redirectTowanderkeep(){
+    window.location.replace("http://127.0.0.1:8000/wanderkeep");
 }
 
 // These functions are called in our map.js file and index.js file. They enable us to create a delete Pop up Modal

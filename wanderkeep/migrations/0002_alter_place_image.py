@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('myplaces', '0001_initial'),
+        ('wanderkeep', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='place',
             name='image',
-            field=models.ImageField(blank=True, default='myplaces/static/places_pictures/default.png', upload_to='myplaces/static/places_pictures'),
+            field=models.ImageField(blank=True, default='wanderkeep/static/places_pictures/default.png', upload_to='wanderkeep/static/places_pictures'),
         ),
     ]
